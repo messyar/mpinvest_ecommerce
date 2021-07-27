@@ -2,5 +2,32 @@
 {% load static %}
 {% block layout %}
 {% include "html/partials/main_header.html" %}
+<div class="row mt-3">
+    <div class="col-1 my-auto">
+        <img src="{% static 'img\chevron_left.png' %}" class="ml-4">
+    </div>
+    <div class="col-10">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-6 my-auto">
+                <div class="row">
+                    <h2 class="h2 text-uppercase mb-3">Всегда в ногу со временем!</h2>
+                </div>
+                <div class="row">
+                    <span class="h4">
+                        В наличии на складе всегда огромный ассортимент металлопроката, ознакомьтесь с ним в нашем каталоге
+                    </span>
+                </div>
+            </div>
+            <div class="col-4">
+                <img src="{% static 'img\banner_image_1.png' %}">
 
+            </div>
+        </div>
+
+    </div>
+    <div class="col-1 my-auto">
+        <img src="{% static 'img\chevron_right.png' %}">
+    </div>
+</div>
 {% endblock %}

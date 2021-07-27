@@ -27,7 +27,7 @@ location = lambda x: os.path.join(os.path.dirname(os.path.realpath(__file__)), x
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'f%sq*i30u+mnbxntvwt8bjry*8cm-$cw2=dpl(8wb+7$p513ip'
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
