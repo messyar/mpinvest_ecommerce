@@ -1,0 +1,48 @@
+.product_pod {
+    height: 300px;
+    margin-bottom: 0px;
+}
+
+.product_pod h3 {
+    margin-top: 0px !important;
+    text-align: left;
+    
+}
+
+.product_pod a {
+    color: black;
+}
+
+.image_container img {
+    max-height: 254px;
+    width: 254px !important;
+    height: 254px !important;
+    border: none;
+}
+
+.star-rating {
+    display: none !important;
+}
+
+.product_price {
+    display: none;
+}
+
+.index_services {
+    font-family: Open Sans;
+    font-size: 18px;
+}
+
+.index_services_header {
+    color: #0094CC;
+    font-size: 24px;
+    line-height: 33px;
+}
+
+.footer_menu a {
+    color: #0094CC;
+}
+
+.btn_footer{
+    background-color: #0094CC;
+}

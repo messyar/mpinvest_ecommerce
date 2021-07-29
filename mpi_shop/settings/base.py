@@ -19,7 +19,7 @@ def gettext_noop(s):
     return s
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 location = lambda x: os.path.join(os.path.dirname(os.path.realpath(__file__)), x)
 
@@ -85,7 +85,8 @@ INSTALLED_APPS = [
     'treebeard',
     'sorl.thumbnail',   # Default thumbnail backend, can be replaced
     'django_tables2',
-    'mpi_shop'
+    'mpi_shop',
+    'easy_thumbnails'
 ]
 
 SITE_ID = 1
@@ -143,15 +144,7 @@ HAYSTACK_CONNECTIONS = {
 WSGI_APPLICATION = 'mpi_shop.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 
 
 # Password validation
@@ -207,3 +200,6 @@ OSCAR_SHOP_NAME = 'МЕТАЛЛПРОМИНВЕСТ'
 
 OSCAR_SHOP_TAGLINE = 'Всегда в ногу со временем!'
 
+OSCAR_DEFAULT_CURRENCY = 'RUB'
+
+OSCAR_THUMBNAILER = 'oscar.core.thumbnails.EasyThumbnails'
