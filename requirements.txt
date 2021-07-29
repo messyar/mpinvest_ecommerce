@@ -1,7 +1,7 @@
 asgiref==3.4.1
 Babel==2.9.1
 Django==3.2.5
-django-extra-views==0.14.0
+django-extra-views==0.13.0
 django-haystack==3.0
 django-oscar==3.1
 django-phonenumber-field==5.2.0
