@@ -1,7 +1,7 @@
 import os
 from mp_invest.settings.base import *
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['mp-invest.ru']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -24,3 +24,5 @@ DATABASES = {
         'PASSWORD': 'BuLqaPifbigis78',
     },
 }
+
+WSGI_APPLICATION = 'mp_invest.wsgi.application'
