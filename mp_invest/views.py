@@ -1,6 +1,6 @@
 
 from django.shortcuts import render
-from mpi_shop.requisites import OUR_PHONE
+from mp_invest.requisites import OUR_PHONE
 
 from oscar.apps.catalogue.search_handlers import get_product_search_handler_class
 

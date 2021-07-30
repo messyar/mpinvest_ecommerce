@@ -1,5 +1,5 @@
 import os
-from mpi_shop.settings.base import *
+from mp_invest.settings.base import *
 
 ALLOWED_HOSTS = ['192.162.64.87']
 

@@ -1,4 +1,4 @@
-"""mpi_shop URL Configuration
+"""mp_invest URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -21,7 +21,7 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 
-import mpi_shop.views as views
+import mp_invest.views as views
 
 
 urlpatterns = [
