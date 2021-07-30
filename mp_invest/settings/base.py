@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 from pathlib import Path
 from oscar.defaults import *
+from secret_key import MPI_SECRET_KEY
 
 
 def gettext_noop(s):
@@ -27,7 +28,7 @@ location = lambda x: os.path.join(os.path.dirname(os.path.realpath(__file__)), x
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = MPI_SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
