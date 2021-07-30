@@ -1,7 +1,7 @@
 import os
 from mp_invest.settings.base import *
 
-ALLOWED_HOSTS = ['192.162.64.87']
+ALLOWED_HOSTS = ['*']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
