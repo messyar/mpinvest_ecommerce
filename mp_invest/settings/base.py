@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 from pathlib import Path
 from oscar.defaults import *
-from secret_key import MPI_SECRET_KEY
+from mp_invest.settings.secret_key import MPI_SECRET_KEY
 
 
 def gettext_noop(s):
