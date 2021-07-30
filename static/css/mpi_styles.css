@@ -1,0 +1,25 @@
+body {
+  background-color: #fff;
+}
+
+.mpi-bg-menu {
+    background-color: #0094CC;
+}
+
+.mpi-banner-primary-text {
+
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 64px;
+}
+
+.mpi-banner-secondary-text {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.mpi-head-primary-text {
+    font-weight: normal;
+    font-size: 56px;
+    line-height: 83px;
+}
