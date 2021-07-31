@@ -26,3 +26,10 @@ DATABASES = {
 }
 
 WSGI_APPLICATION = 'mp_invest.wsgi.application'
+
+STATIC_URL = '/static/'
+STATIC_ROOT = '/home/c35040/mp-invest.ru/www/static'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = '/home/c35040/mp-invest.ru/www/media'
+
