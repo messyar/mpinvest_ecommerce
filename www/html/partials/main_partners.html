@@ -1,0 +1,60 @@
+{% load static %}
+
+<script>
+        $(document).ready(function(){
+            var owl_2 = $('.slide-partners');
+            owl_2.owlCarousel({
+                loop:true,
+                lazyLoad: true,
+                dots: false,
+                autoWidth: true,
+                items: 6
+            });
+
+            // Go to the next item
+            $('.my-owl-next_2').click(function() {
+                owl_2.trigger('next.owl.carousel');
+            });
+            // Go to the previous item
+            $('.my-owl-prev_2').click(function() {
+                // With optional speed parameter
+                // Parameters has to be in square bracket '[]'
+                owl_2.trigger('prev.owl.carousel', [300]);
+            });
+
+        });
+
+
+</script>
+<div class="owl-carousel owl-theme slide-partners mt-3 mb-3">
+<div class="row">
+    <div class="col-1 my-auto">
+            <button class="btn my-owl-prev_2">
+                <img src="{% static 'img\chevron_left.png' %}" class="ml-4">
+            </button>
+        </div>
+    <div class="col-10">
+      <div class="owl-stage-outer">
+        <div class="owl-stage">
+          {% if partners_paths %}
+              {% for partner in partners_paths %}
+                    <div class="owl-item">
+
+                        <img src="{% static partner %}">
+
+                    </div>
+              {% endfor %}
+          {% else %}
+              <div class="col"> Партнеры не найдено </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <div class="col-1 my-auto">
+            <button class="btn my-owl-next_2">
+                <img src="{% static 'img\chevron_right.png' %}">
+            </button>
+        </div>
+</div>
+</div>

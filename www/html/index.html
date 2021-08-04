@@ -5,54 +5,8 @@
 {% load i18n %}
 {% include "html/partials/main_header.html" %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/mpi_styles_index.css' %}" />
-<div class="row mt-3 mb-3">
-    <div class="col-1 my-auto">
-        <a href="#"> <img src="{% static 'img\chevron_left.png' %}" class="ml-4"> </a>
-    </div>
-    <div class="col-10">
-        <div class="row">
 
-            <div class="col-7 my-auto">
-                <div class="row">
-                    <h2 class="h2 text-uppercase mb-3 mpi-banner-primary-text">Всегда в ногу со временем!</h2>
-                </div>
-                <div class="row mr-4">
-                    <h3 class="mpi-banner-secondary-text">
-                        В наличии на складе всегда огромный ассортимент металлопроката, ознакомьтесь с ним в нашем <a href="catalog">каталоге</a>
-                    </h3>
-                </div>
-            </div>
-            <div class="col-4">
-                <img src="{% static 'img\banner_image_1.png' %}">
-
-            </div>
-        </div>
-
-    </div>
-    <div class="col-1 my-auto">
-        <a href="#"> <img src="{% static 'img\chevron_right.png' %}"> </a>
-    </div>
-</div>
-<div class="row mb-3">
-    <div class="col-1"></div>
-    <div class="col-4">
-        <div class="row border border-dark mt-2"></div>
-    </div>
-    <div class="col-2">
-        <div class="row ml-1">
-
-            <div class="col-2"> <a href="#"> <img src="{% static 'img/banner_selected.png' %}"> </a> </div>
-            <div class="col-2"> <a href="#"> <img src="{% static 'img/banner_unselected.png' %}"> </a> </div>
-            <div class="col-2"> <a href="#"> <img src="{% static 'img/banner_unselected.png' %}"> </a> </div>
-            <div class="col-2"> <a href="#"> <img src="{% static 'img/banner_unselected.png' %}"> </a> </div>
-            <div class="col-2"> <a href="#"> <img src="{% static 'img/banner_unselected.png' %}"> </a> </div>
-            <div class="col-1"></div>
-        </div>
-    </div>
-    <div class="col-4">
-        <div class="row border border-dark mt-2"></div>
-    </div>
-</div>
+{% include "html/partials/main_banners_carousel.html" %}
 
 <div class="row">
     <div class="col-12 mx-auto">
@@ -64,33 +18,7 @@
 
 </div>
 
-<div class="row">
-    <div class="col-1 my-auto">
-        <a href="#"> <img src="{% static 'img\chevron_left.png' %}" class="ml-4"> </a>
-    </div>
-    <div class="col-10 justify-middle">
-        {% if products %}
-        <section>
-            <div>
-                <ol class="row list-unstyled ml-0 pl-0">
-                    {% for product in products %}
-                    <li class="col-sm-6 col-md-4 col-lg-3">{% render_product product %}
-
-                    </li>
-
-                    {% endfor %}
-                </ol>
-                {% include "oscar/partials/pagination.html" %}
-            </div>
-        </section>
-        {% else %}
-        <p class="nonefound">{% trans "No products found." %}</p>
-        {% endif %}
-    </div>
-    <div class="col-1 my-auto">
-        <a href="#"> <img src="{% static 'img\chevron_right.png' %}"> </a>
-    </div>
-</div>
+{% include "html/partials/main_products_carousel.html" %}
 
 <div class="row mb-3">
     <div class="col-1"></div>
@@ -205,96 +133,8 @@
 
 </div>
 
-<div class="row">
-    <div class="col-1 my-auto">
-        <a href="#"> <img src="{% static 'img\chevron_left.png' %}" class="ml-4"> </a>
-    </div>
-    <div class="col-10">
-        <div class="row">
-            <div class="col-2 my-auto">
-                <img src="{% static 'img/partners/nlmk.png' %}">
-            </div>
-            <div class="col-2 my-auto">
-                <img src="{% static 'img/partners/tmk logo.png' %}">
-            </div>
-            <div class="col-2 my-auto">
-                <img src="{% static 'img/partners/ctpzlogo.png' %}">
-            </div>
-            <div class="col-2 my-auto">
-                <img src="{% static 'img/partners/accelor logo.png' %}">
-            </div>
-            <div class="col-2 my-auto">
-                <img src="{% static 'img/partners/mmk logo.png' %}">
-            </div>
-            <div class="col-2 my-auto">
-                <img src="{% static 'img/partners/ugmk logo.png' %}">
-            </div>
+{% include "html/partials/main_partners.html" %}
 
-        </div>
-    </div>
-    <div class="col-1 my-auto">
-        <a href="#"> <img src="{% static 'img\chevron_right.png' %}""> </a>
-    </div>
-</div>
-
-<div class="row mb-5">
-    <div class="col-1"></div>
-    <div class="col-10">
-        <div class="row border border-dark">
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-1"></div>
-    <div class="col-10 footer_menu">
-        <div class="row">
-            <div class="col-2">
-                <ul class="list-unstyled">
-                    <a href="#"> <li>Труба</li> </a>
-                    <a href="#"><li>Лист</li></a>
-                    <a href="#"><li>Швеллер</li></a>
-                    <a href="#"><li>Балка</li></a>
-                    <a href="#"><li>Арматура</li></a>
-                </ul>
-            </div>
-            <div class="col-2">
-                <ul class="list-unstyled">
-                    <a href="#"><li>Проволока</li></a>
-                    <a href="#"><li>Уголок</li></a>
-                    <a href="#"><li>Квадрат</li></a>
-                    <a href="#"><li>Полоса</li></a>
-                    <a href="#"><li>Круг</li></a>
-                </ul>
-            </div>
-            <div class="col-2">
-                <ul class="list-unstyled">
-                    <a href="#"><li>Шестигранник</li></a>
-                    <a href="#"><li>Профнастил</li></a>
-                    <a href="#"><li>Сетка</li></a>
-                    <a href="#"><li>Каркасы</li></a>
-                    <a href="#"><li>Нержавеющий сорт</li></a>
-                </ul>
-            </div>
-            <div class="col-2">
-                <ul class="list-unstyled">
-                    <a href="#"><li>Цветные металлы</li></a>
-                    <a href="#"><li>Метизы</li></a>
-                    <a href="#"><li>Канаты</li></a>
-                </ul>
-            </div>
-            <div class="col">
-                <div class="row">
-                    <button class="btn btn-primary mx-auto px-4 btn_footer"> Подписаться на новости </button>
-                </div>
-                <div class="row">
-                    <p class="text-secondary mx-auto">
-                        Все права соблюдены
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+{% include "html/partials/main_footer.html" %}
 
 {% endblock %}

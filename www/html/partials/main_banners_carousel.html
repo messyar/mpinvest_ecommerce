@@ -1,0 +1,109 @@
+{% load static %}
+
+<script>
+        $(document).ready(function(){
+            var owl = $('.slide-banners');
+            owl.owlCarousel({
+                loop:true,
+                lazyLoad: true,
+                dots: true,
+                stagePadding: 50,
+                items: 1
+            });
+
+            // Go to the next item
+            $('.my-owl-next').click(function() {
+                owl.trigger('next.owl.carousel');
+            });
+            // Go to the previous item
+            $('.my-owl-prev').click(function() {
+                // With optional speed parameter
+                // Parameters has to be in square bracket '[]'
+                owl.trigger('prev.owl.carousel', [300]);
+            });
+
+        });
+
+
+</script>
+
+<div class="owl-carousel owl-theme slide-banners mt-3 mb-3">
+    <div class="row">
+        <div class="col-1 my-auto">
+
+            <button class="btn my-owl-prev">
+                <img src="{% static 'img\chevron_left.png' %}" class="ml-4">
+            </button>
+
+        </div>
+        <div class="col-10">
+            <div class="owl-stage-outer">
+                <div class="owl-stage">
+                    <div class="owl-item">
+
+                        <div class="row mt-4">
+
+                            <div class="col-7 my-auto mx-0 px-0">
+                                <div class="row">
+                                    <h2 class="h2 text-uppercase mb-3 mpi-banner-primary-text">Всегда в ногу со временем!</h2>
+                                </div>
+                                <div class="row mr-4">
+                                    <h3 class="mpi-banner-secondary-text">
+                                        В наличии на складе всегда огромный ассортимент металлопроката, ознакомьтесь с ним в нашем <a href="catalog">каталоге</a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="col-3 mx-0 px-0">
+                                <img src="{% static 'img\banner_image_1.png' %}">
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="owl-item">
+
+                        <div class="row mt-4">
+
+                            <div class="col-7 my-auto mx-0 px-0">
+                                <div class="row">
+                                    <h2 class="h2 text-uppercase mb-3 mpi-banner-primary-text">Лучшие цены!</h2>
+                                </div>
+                                <div class="row mr-4">
+                                    <h3 class="mpi-banner-secondary-text">
+                                        В наличии на складе всегда огромный ассортимент металлопроката, ознакомьтесь с ним в нашем <a href="catalog">каталоге</a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="col-3 mx-0 px-0">
+                                <img src="{% static 'img\banner_image_1.png' %}">
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-1 my-auto">
+            <button class="btn my-owl-next">
+                <img src="{% static 'img\chevron_right.png' %}">
+            </button>
+        </div>
+    </div>
+
+    <div class="row mt-3 mb-n4">
+        <div class="col-1"></div>
+        <div class="col-4">
+            <div class="row border border-dark"></div>
+        </div>
+        <div class="col-2">
+
+        </div>
+        <div class="col-4">
+            <div class="row border border-dark mt-2"></div>
+        </div>
+    </div>
+
+</div>
