@@ -4,6 +4,9 @@
 {% load product_tags %}
 {% load i18n %}
 {% include "html/partials/main_header.html" %}
+
+{% include "html/partials/callback_form.html" %}
+
 <link rel="stylesheet" type="text/css" href="{% static 'css/mpi_styles_index.css' %}" />
 
 {% include "html/partials/main_banners_carousel.html" %}
@@ -39,12 +42,13 @@
 </div>
 <div class="row mb-5">
     <div class="col-1"></div>
-    <div class="col-2">
+
+    <div class="col-4 col-md-2">
         <a href="#">
         <img src="{% static 'img/services_icon.png' %}">
         </a>
     </div>
-    <div class="col-3 my-auto">
+    <div class="col-6 col-md-3 my-auto">
         <a href="#">
         <h3 class="index_services_header mb-0">
             Гильотинная резка
@@ -54,12 +58,15 @@
             Краткое описание услуги, чтобы сразу было понятно что за услуга
         </p>
     </div>
-    <div class="col-2">
+    <div class="col-1 d-md-none"></div>
+    <div class="col-12 mb-5"></div>
+    <div class="col-1 d-md-none"></div>
+    <div class="col-4 col-md-2">
         <a href="#">
         <img src="{% static 'img/services_icon.png' %}">
         </a>
     </div>
-    <div class="col-3 my-auto">
+    <div class="col-6 col-md-3 my-auto">
         <a href="#">
         <h3 class="index_services_header mb-0">
             Лазерная резка
@@ -73,12 +80,12 @@
 
 <div class="row mb-5">
     <div class="col-1"></div>
-    <div class="col-2">
+    <div class="col-4 col-md-2">
         <a href="#">
         <img src="{% static 'img/services_icon.png' %}">
         </a>
     </div>
-    <div class="col-3 my-auto">
+    <div class="col-6 col-md-3 my-auto">
         <a href="#">
         <h3 class="index_services_header mb-0">
             Газовая резка
@@ -88,12 +95,15 @@
             Краткое описание услуги, чтобы сразу было понятно что за услуга
         </p>
     </div>
-    <div class="col-2">
+    <div class="col-1 d-md-none"></div>
+    <div class="col-12 mb-5"></div>
+    <div class="col-1 d-md-none"></div>
+    <div class="col-4 col-md-2">
         <a href="#">
         <img src="{% static 'img/services_icon.png' %}">
         </a>
     </div>
-    <div class="col-3 my-auto">
+    <div class="col-6 col-md-2 my-auto">
         <a href="#">
         <h3 class="index_services_header mb-0">
             Плазменная резка

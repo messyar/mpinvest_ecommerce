@@ -1,0 +1,33 @@
+
+
+
+<div class="modal fade" id="callback_modal" tabindex="-1" aria-labelledby="callback_modal_Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="callback_modal_Label">Заказать обратный звонок</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="/" method="post">
+          {% csrf_token %}
+          {{ callback_form.non_field_errors }}
+          <div class="form-group">
+            {{ callback_form.name.errors }}
+	        {{ callback_form.name }}
+          </div>
+          <div class="form-group">
+            {{ callback_form.phone.errors }}
+	        {{ callback_form.phone }}
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+        <input type="submit" class="btn btn-primary btn_footer" value="Заказать звонок"/>
+      </div>
+    </div>
+  </div>
+</div>

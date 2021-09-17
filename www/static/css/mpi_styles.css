@@ -3,7 +3,7 @@ body {
 }
 
 .mpi-bg-menu {
-    background-color: #0094CC;
+    background-color: #0094CC !important;
 }
 
 .mpi-banner-primary-text {
@@ -22,4 +22,59 @@ body {
     font-weight: normal;
     font-size: 56px;
     line-height: 83px;
+}
+
+.header-horizontal-line {
+    border: 1px solid #767272;
+}
+
+
+
+@media (max-width: 767px) {
+    .mpi-img-logo {
+        margin-left: 15px;
+    }
+    .mpi-header-contacts {
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 414px) {
+    .mpi-img-logo {
+        height: 40px;
+        width: 300px;
+        margin-left: 10px;
+    }
+    .mpi-header-contacts {
+        margin-left: 10px;
+    }
+    .mpi-head-primary-text {
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 63px;
+}
+}
+
+@media (max-width: 280px) {
+    .mpi-img-logo {
+        height: 35px;
+        width: 250px;
+        margin-left: 5px;
+
+    }
+    .mpi-header-contacts {
+        margin-left: 5px;
+    }
+}
+
+@media (max-width: 991px) {
+.mpi-nav-burger {
+    background-color: #0094CC !important;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.mpi-bg-menu {
+    background-color: white !important;
 }

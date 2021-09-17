@@ -1,3 +1,6 @@
+.callback-text {
+    font-size: 0.9rem;
+}
 
 .product_pod {
     height: 300px;
@@ -77,3 +80,5 @@
   .slide-partners .owl-item img {
     margin-left: 5px;
   }
+
+

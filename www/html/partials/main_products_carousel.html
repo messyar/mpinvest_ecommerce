@@ -10,7 +10,21 @@
                 lazyLoad: true,
                 dots: false,
                 autoWidth: true,
-                items: 4
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    768:{
+                        items:2
+                    },
+                    1000:{
+                        items:3
+                    },
+                    1500:{
+                        items:4
+                    }
+
+                }
             });
 
             // Go to the next item
@@ -31,14 +45,14 @@
 
 <div class="owl-carousel owl-theme slide-products mt-3 mb-3">
 
-    <div class="row">
+    <div class="row justify-content-between">
         <div class="col-1 my-auto">
             <button class="btn my-owl-prev_1">
                 <img src="{% static 'img\chevron_left.png' %}" class="ml-4">
             </button>
         </div>
 
-        <div class="col-10 justify-middle mx-0 px-n2">
+        <div class="col-8 сol-md-10 justify-middle mx-0 px-n2">
             {% if products %}
                 <section>
                     <div class="owl-stage-outer">
