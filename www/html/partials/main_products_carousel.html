@@ -14,6 +14,9 @@
                     0:{
                         items:1
                     },
+                    10:{
+                        items:1
+                    },
                     768:{
                         items:2
                     },
@@ -45,14 +48,14 @@
 
 <div class="owl-carousel owl-theme slide-products mt-3 mb-3">
 
-    <div class="row justify-content-between">
-        <div class="col-1 my-auto">
+    <div class="row justify-content-between small-size-screen-container">
+        <div class="col-1 my-auto small-size-screen-container">
             <button class="btn my-owl-prev_1">
-                <img src="{% static 'img\chevron_left.png' %}" class="ml-4">
+                <img src="{% static 'img\chevron_left.png' %}" class="mpi-ml-owl-prev-1">
             </button>
         </div>
 
-        <div class="col-8 сol-md-10 justify-middle mx-0 px-n2">
+        <div class="col-9 сol-md-10 justify-middle mx-0 px-n2">
             {% if products %}
                 <section>
                     <div class="owl-stage-outer">
@@ -69,7 +72,7 @@
                 <p class="nonefound">{% trans "No products found." %}</p>
             {% endif %}
         </div>
-        <div class="col-1 my-auto">
+        <div class="col-1 my-auto small-size-screen-container">
             <button class="btn my-owl-next_1">
                 <img src="{% static 'img\chevron_right.png' %}">
             </button>
