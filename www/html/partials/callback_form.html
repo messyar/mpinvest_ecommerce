@@ -10,8 +10,9 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      <form action="/" method="post">
       <div class="modal-body">
-        <form action="/" method="post">
+
           {% csrf_token %}
           {{ callback_form.non_field_errors }}
           <div class="form-group">
@@ -22,12 +23,13 @@
             {{ callback_form.phone.errors }}
 	        {{ callback_form.phone }}
           </div>
-        </form>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
         <input type="submit" class="btn btn-primary btn_footer" value="Заказать звонок"/>
       </div>
+      </form>
     </div>
   </div>
 </div>

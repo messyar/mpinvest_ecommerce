@@ -38,7 +38,6 @@ def index(request):
             if file.endswith('.png') or file.endswith('.jpg') or file.endswith('.jpeg'):
                 partners_paths.append(os.path.join(dir_to_partners, file))
 
-
     if request.method == 'POST':
         callback_form = CallbackForm(request.POST)
         # Если форма заполнена корректно, сохраняем все введённые пользователем значения
@@ -57,7 +56,8 @@ def index(request):
             except BadHeaderError:  # Защита от уязвимости
                 return HttpResponse('Invalid header found')
             # Переходим на другую страницу, если сообщение отправлено
-            return render(request, 'site/thanks.html')
+            return render(request, 'html/index.html', {'our_phone': OUR_PHONE, 'products': products,
+                                                       'partners_paths': partners_paths, 'callback_form': callback_form})
     else:
         # Заполняем форму
         callback_form = CallbackForm()
