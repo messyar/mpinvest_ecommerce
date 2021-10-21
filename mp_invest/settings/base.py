@@ -13,11 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 from pathlib import Path
 from oscar.defaults import *
-from mp_invest.settings.secret_key import (MPI_SECRET_KEY,
-                                           OUR_EMAIL_HOST,
-                                           OUR_EMAIL_USE_TLS,
-                                           OUR_EMAIL_HOST_USER,
-                                           OUR_EMAIL_HOST_PASSWORD)
+from mp_invest.settings.secret_key import MPI_SECRET_KEY
 
 
 def gettext_noop(s):
@@ -144,13 +140,7 @@ HAYSTACK_CONNECTIONS = {
     },
 }
 
-
-
 WSGI_APPLICATION = 'mp_invest.wsgi.application'
-
-
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -210,8 +200,3 @@ OSCAR_SHOP_TAGLINE = 'Всегда в ногу со временем!'
 OSCAR_DEFAULT_CURRENCY = 'RUB'
 
 OSCAR_THUMBNAILER = 'oscar.core.thumbnails.EasyThumbnails'
-
-EMAIL_HOST = OUR_EMAIL_HOST
-EMAIL_USE_TLS = OUR_EMAIL_USE_TLS
-EMAIL_HOST_USER = OUR_EMAIL_HOST_USER
-EMAIL_HOST_PASSWORD = OUR_EMAIL_HOST_PASSWORD
