@@ -53,7 +53,7 @@ def index(request):
 
             try:
                 print('Start to send email')
-                response_email = send_mail(subject, message, 'mpinvest.info@yandex.ru', recipients)
+                response_email = send_mail(subject, message, 'mpinvest.info@yandex.ru', recipients, fail_silently=False)
             except BadHeaderError:  # Защита от уязвимости
                 print('Invalid header found')
                 return HttpResponse('Invalid header found')
