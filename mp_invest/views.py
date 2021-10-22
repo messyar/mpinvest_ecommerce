@@ -52,13 +52,11 @@ def index(request):
             recipients = ['mpinvest.info@yandex.ru']
 
             try:
-                print('Start to send email')
-                response_email = send_mail(subject, message, 'mpinvest.info@yandex.ru', recipients, fail_silently=False)
+                response_email = send_mail(subject, message, settings.EMAIL_HOST_USER, recipients, fail_silently=False)
             except BadHeaderError:  # Защита от уязвимости
                 print('Invalid header found')
                 return HttpResponse('Invalid header found')
             # Переходим на другую страницу, если сообщение отправлено
-            print('Email response: ', response_email)
             return render(request, 'html/index.html', {'our_phone': OUR_PHONE, 'products': products,
                                                        'partners_paths': partners_paths, 'callback_form': callback_form})
     else:
