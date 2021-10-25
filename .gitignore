@@ -1,3 +1,5 @@
 /db.sqlite3
 /mp_invest/settings/develop.py
 /mp_invest/settings/secret_key.py
+/new_items.csv
+/new_items/new_items.xlsx

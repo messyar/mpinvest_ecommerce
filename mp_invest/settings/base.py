@@ -200,3 +200,5 @@ OSCAR_SHOP_TAGLINE = 'Всегда в ногу со временем!'
 OSCAR_DEFAULT_CURRENCY = 'RUB'
 
 OSCAR_THUMBNAILER = 'oscar.core.thumbnails.EasyThumbnails'
+
+OSCAR_MISSING_IMAGE_URL = 'www/static/img/image_not_found.jpg'
